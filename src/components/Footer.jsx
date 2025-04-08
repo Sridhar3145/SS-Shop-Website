@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/logo.webp";
 import { FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const linkClass =
