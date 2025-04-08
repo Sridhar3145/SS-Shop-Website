@@ -22,18 +22,18 @@ const Footer = () => {
 
         {/*  (Navigation Links) */}
         <div className="flex flex-col items-start  space-y-2 text-center text-xl">
-          <a href="/" className={linkClass}>
+          <Link to="/" className={linkClass}>
             Home
-          </a>
-          <a href="/product" className={linkClass}>
+          </Link>
+          <Link to="/product" className={linkClass}>
             Products
-          </a>
-          <a href="/cart" className={linkClass}>
+          </Link>
+          <Link to="/cart" className={linkClass}>
             Cart
-          </a>
-          <a href="/contact" className={linkClass}>
+          </Link>
+          <Link to="/contact" className={linkClass}>
             Contact
-          </a>
+          </Link>
         </div>
 
         {/* Address & Contact  */}
