@@ -8,7 +8,6 @@ import Cart from "./components/Cart";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Checkout from "./components/Checkout";
-import Thanks from "./components/Thanks";
 
 function App() {
   const [cart, setCart] = useState(() => {
@@ -68,8 +67,6 @@ function App() {
             path="/checkout"
             element={<Checkout cart={cart} setCart={setCart} />}
           />
-
-          <Route path="/thanks" element={<Thanks />} />
         </Routes>
         <Footer />
       </Router>
