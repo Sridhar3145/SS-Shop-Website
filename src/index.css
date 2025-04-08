@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@plugin "tailwind-scrollbar";
+
+.bg-primary {
+  
+  background: rgba(45, 45, 44, 0.352); 
+}
+
+.bg-second {
+  background: #ffe169; 
+}
+
+.navbar {
+  background: none; 
+}
+
+.shadow-top {
+  box-shadow: 0 -4px 10px rgba(15, 13, 13, 0.4); 
+}
+.text-black{
+  color:#000000 ;
+}
+.text-yellow{
+  color:#ffe169 ;
+}
