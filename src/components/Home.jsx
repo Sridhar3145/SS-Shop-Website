@@ -37,7 +37,7 @@ const Home = ({ addToCart }) => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full flex flex-col lg:flex-row items-center justify-between bg-fixed mt-24 px-6 lg:px-28 py-10 gap-8">
+      <section className="hero-section">
         <img src={fruitimg2} data-aos="fade-right" />
         <div className="text-center text-white px-4" data-aos="fade-left">
           <h1 className="text-5xl md:text-6xl font-bold drop-shadow-lg text-black">
@@ -48,7 +48,7 @@ const Home = ({ addToCart }) => {
           </p>
           <button
             onClick={() => navigate("/product")}
-            className="mt-6 px-6 py-3 bg-black hover:bg-gray-900 text-yellow-400 font-semibold text-lg rounded-full shadow-lg transition"
+            className="hero-btn"
             data-aos="zoom-in"
           >
             More Products
@@ -84,15 +84,15 @@ const Home = ({ addToCart }) => {
                 <div className="flex sm:flex-row items-center justify-center w-full gap-10 mt-4">
                   <button
                     onClick={() => handleAddToCart(product)}
-                    className="bg-black hover:bg-gray-800 text-yellow px-4 py-2 rounded-full transition"
+                    className="atc-btn"
                   >
                     Add to Cart
                   </button>
 
-                  <div className="flex items-center border rounded-full px-3 bg-black">
+                  <div className="quantity-box">
                     <button
                       onClick={() => decreaseQty(product.id)}
-                      className="text-lg px-2 py-1 font-bold text-yellow"
+                      className="quantity-btn"
                     >
                       -
                     </button>
@@ -101,7 +101,7 @@ const Home = ({ addToCart }) => {
                     </span>
                     <button
                       onClick={() => increaseQty(product.id)}
-                      className="text-lg px-2 py-1 font-bold text-yellow"
+                      className="quantity-btn"
                     >
                       +
                     </button>

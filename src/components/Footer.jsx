@@ -39,17 +39,17 @@ const Footer = () => {
 
         {/* Address & Contact  */}
         <div className="flex flex-col items-start  md:items-end space-y-2 text-center  md:text-right">
-          <p className="text-lg md:text-base flex items-center space-x-2">
+          <p className="p-style">
             <span>📞</span>
             <span>+91 9865298470</span>
           </p>
-          <p className="text-lg md:text-base flex items-center space-x-2">
+          <p className="p-style">
             <span>📧</span>
             <span>selvamsarbathshop@gmail.com</span>
           </p>
           <a
             href="https://wa.me/919345866691"
-            className="text-lg md:text-base flex items-center space-x-2 hover:text-green-500"
+            className="p-style hover:text-green-500"
           >
             <FaWhatsapp />
             <span>+91 9345866691</span>

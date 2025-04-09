@@ -59,19 +59,19 @@ const Products = ({ addToCart }) => {
 
               {/* Quantity Selector & Add to Cart */}
               <div className="mt-4 flex items-center space-x-4">
-                <div className="flex items-center border rounded-md px-3 py-1 bg-gray-100">
+                <div className="quantity-box">
                   <button
                     onClick={() => decreaseQty(product.id)}
-                    className="text-lg px-2 py-1 font-bold"
+                    className="quantity-btn"
                   >
                     -
                   </button>
-                  <span className="px-3 text-lg">
+                  <span className="px-3 text-lg text-yellow ">
                     {quantities[product.id] || 1}
                   </span>
                   <button
                     onClick={() => increaseQty(product.id)}
-                    className="text-lg px-2 py-1 font-bold"
+                    className="quantity-btn"
                   >
                     +
                   </button>
@@ -80,7 +80,7 @@ const Products = ({ addToCart }) => {
                 {/* Add to Cart Button */}
                 <button
                   onClick={() => handleAddToCart(product)}
-                  className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded"
+                  className="atc-btn"
                 >
                   Add to Cart
                 </button>

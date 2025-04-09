@@ -38,7 +38,7 @@ const Cart = ({ cart, removeFromCart, setCart }) => {
             <p className="text-xl">Your cart is empty.</p>
             <button
               onClick={() => navigate("/product")}
-              className="mt-6 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-6 rounded-full transition"
+              className="mt-6 cart-btns"
             >
               Browse Products
             </button>
@@ -92,7 +92,7 @@ const Cart = ({ cart, removeFromCart, setCart }) => {
 
                           <button
                             onClick={() => handleRemove(item.id)}
-                            className="text-red-500 hover:text-red-700 text-xl"
+                            className="trash-btn"
                           >
                             <FaTrashAlt />
                           </button>
@@ -102,10 +102,10 @@ const Cart = ({ cart, removeFromCart, setCart }) => {
                   </div>
 
                   <div className="hidden sm:flex items-center gap-6">
-                    <div className="flex items-center border rounded-4xl px-3 bg-black">
+                    <div className="quantity-box">
                       <button
                         onClick={() => updateQuantity(item.id, -1)}
-                        className="text-lg px-2 py-1 font-bold text-yellow"
+                        className="quantity-btn"
                       >
                         -
                       </button>
@@ -114,7 +114,7 @@ const Cart = ({ cart, removeFromCart, setCart }) => {
                       </span>
                       <button
                         onClick={() => updateQuantity(item.id, 1)}
-                        className="text-lg px-2 py-1 font-bold text-yellow"
+                        className="quantity-btn"
                       >
                         +
                       </button>
@@ -122,7 +122,7 @@ const Cart = ({ cart, removeFromCart, setCart }) => {
 
                     <button
                       onClick={() => handleRemove(item.id)}
-                      className="text-red-500 hover:text-red-700 text-xl"
+                      className="trash-btn"
                     >
                       <FaTrashAlt />
                     </button>
@@ -136,21 +136,21 @@ const Cart = ({ cart, removeFromCart, setCart }) => {
             ))}
 
             {/* Total */}
-            <div className="flex flex-col sm:flex-row justify-between items-center bg-yellow-400 p-6 rounded-lg shadow-md mt-6 gap-4">
+            <div className="total-amount">
               <span className="text-xl font-bold text-gray-700">
                 Total Amount:
               </span>
               <span className="text-xl font-bold text-green-700">
-                ₹{totalAmount}
+                ₹{totalAmount}.00
               </span>
             </div>
 
             {/* Checkout Button */}
             {cart.length > 0 && (
-              <div className="text-center sm:text-right mt-4">
+              <div className="cart-btn-box">
                 <button
                   onClick={() => navigate("/checkout")}
-                  className="bg-black hover:bg-gray-900 text-yellow-400 font-bold py-2 px-6 rounded-full transition"
+                  className="cart-btns"
                 >
                   Proceed to Checkout
                 </button>
@@ -158,10 +158,10 @@ const Cart = ({ cart, removeFromCart, setCart }) => {
             )}
 
             {/* Keep Shopping */}
-            <div className="text-center sm:text-right mt-4">
+            <div className="cart-btn-box">
               <button
                 onClick={() => navigate("/product")}
-                className="bg-black hover:bg-gray-900 text-yellow-400   font-bold py-2 px-6 rounded-full transition"
+                className="cart-btns"
               >
                 Keep Shopping
               </button>

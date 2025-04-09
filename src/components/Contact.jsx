@@ -70,9 +70,7 @@ const Contact = () => {
   };
   return (
     <div className="max-w-5xl mx-auto p-6 bg-yellow-400 rounded-xl shadow-md mt-20 mb-52">
-      <h2 className="text-3xl font-semibold text-center mb-6 text-gray-800">
-        Contact Us
-      </h2>
+      <h2 className="section-heading">Contact Us</h2>
 
       <div className="grid md:grid-cols-2 gap-6 items-center">
         {/* Contact Details */}
@@ -105,13 +103,11 @@ const Contact = () => {
               <input
                 type="text"
                 {...register("name")}
-                className="w-full p-2 border-b-2 border-gray-300 bg-transparent focus:border-black focus:outline-none peer"
+                className="contact-input-style peer"
                 placeholder=" "
                 autoComplete="off"
               />
-              <label className="absolute left-0 -top-4 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-black peer-placeholder-shown:text-base peer-focus:-top-4 peer-focus:text-sm peer-focus:text-black">
-                Name
-              </label>
+              <label className="contact-label-style">Name</label>
               {errors.name && (
                 <p className="text-red-600 text-sm">{errors.name.message}</p>
               )}
@@ -122,13 +118,11 @@ const Contact = () => {
               <input
                 type="email"
                 {...register("email")}
-                className="w-full p-2 border-b-2 border-gray-300 bg-transparent focus:border-black focus:outline-none peer"
+                className="contact-input-style peer"
                 placeholder=" "
                 autoComplete="off"
               />
-              <label className="absolute left-0 -top-4 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-black peer-placeholder-shown:text-base peer-focus:-top-4 peer-focus:text-sm peer-focus:text-black">
-                Email
-              </label>
+              <label className="contact-label-style">Email</label>
               {errors.email && (
                 <p className="text-red-600 text-sm">{errors.email.message}</p>
               )}
@@ -139,13 +133,11 @@ const Contact = () => {
               <input
                 type="text"
                 {...register("contactno")}
-                className="w-full p-2 border-b-2 border-gray-300 bg-transparent focus:border-black focus:outline-none peer"
+                className="contact-input-style peer"
                 placeholder=" "
                 autoComplete="off"
               />
-              <label className="absolute left-0 -top-4 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-black peer-placeholder-shown:text-base peer-focus:-top-4 peer-focus:text-sm peer-focus:text-black">
-                Contact No
-              </label>
+              <label className="contact-label-style">Contact No</label>
               {errors.contactno && (
                 <p className="text-red-600 text-sm">
                   {errors.contactno.message}
@@ -158,13 +150,11 @@ const Contact = () => {
               <textarea
                 rows="4"
                 {...register("message")}
-                className="w-full p-2 border-b-2 border-gray-300 bg-transparent focus:border-black focus:outline-none peer"
+                className="contact-input-style peer"
                 placeholder=" "
                 autoComplete="off"
               ></textarea>
-              <label className="absolute left-0 -top-4 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-black peer-placeholder-shown:text-base peer-focus:-top-4 peer-focus:text-sm peer-focus:text-black">
-                Message
-              </label>
+              <label className="contact-label-style">Message</label>
               {errors.message && (
                 <p className="text-red-600 text-sm">{errors.message.message}</p>
               )}
